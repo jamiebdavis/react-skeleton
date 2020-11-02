@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 
+import SkeletonArticle from "../skeletons/SkeletonArticle";
+
 const Articles = () => {
     const [articles, setArticles] = useState(null);
 
@@ -24,7 +26,8 @@ const Articles = () => {
                     </div>
                 ))}
 
-            {!articles && <div>Loading...</div>}
+            {/* {!articles && [1, 2, 3, 4, 5].map(n => <SkeletonArticle key={n} theme="dark" />)} */}
+            {!articles && [1, 2, 3, 4, 5].map(n => <SkeletonArticle key={n} />)}
         </div>
     );
 };
